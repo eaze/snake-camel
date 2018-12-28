@@ -20,7 +20,7 @@ console.log(camelObj.fooBar) // => 'bazz'
 ```
 
 
-`CamelCase`
+`toCamelCase`
 ```javascript
 const casingUtil = require('@eaze/snake-camel')
 
