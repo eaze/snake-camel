@@ -1,0 +1,37 @@
+{
+  "name": "@eaze/snake-camel",
+  "version": "1.0.0",
+  "description": "Snake and camel casing util",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha index-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eaze/snake-camel.git"
+  },
+  "keywords": [
+    "snake",
+    "camel"
+  ],
+  "standard": {
+    "globals": [
+      "describe",
+      "it"
+    ]
+  },
+  "author": "Alan Fu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eaze/snake-camel/issues"
+  },
+  "homepage": "https://github.com/eaze/snake-camel#readme",
+  "dependencies": {
+    "camelcase-keys": "5.0.0",
+    "lodash": "4.17.11",
+    "snakecase-keys": "2.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0"
+  }
+}
