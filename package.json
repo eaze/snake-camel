@@ -1,6 +1,6 @@
 {
   "name": "@eaze/snake-camel",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Snake and camel casing util",
   "main": "index.js",
   "scripts": {
