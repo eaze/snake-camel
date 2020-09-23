@@ -1,0 +1,38 @@
+name: Tests
+
+on:
+  pull_request:
+    branches:
+      - latest
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [12,14]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: setup node
+      uses: actions/setup-node@v2.1.1
+      with:
+        node-version: ${{ matrix.node }}
+        registry-url: 'https://registry.npmjs.org'
+        scope: '@eaze'
+
+    - name: Cache/restore npm cache
+      uses: actions/cache@v2.1.1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}-npm
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - name: npm ci
+      run: npm ci
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+    - name: npm test
+      run: npm test
