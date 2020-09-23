@@ -4,7 +4,10 @@
   "description": "Snake and camel casing util",
   "main": "index.js",
   "scripts": {
-    "test": "mocha index-test.js"
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "test": "mocha index-test.js",
+    "posttest": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -27,11 +30,13 @@
   },
   "homepage": "https://github.com/eaze/snake-camel#readme",
   "dependencies": {
-    "camelcase-keys": "5.0.0",
-    "lodash": "4.17.11",
-    "snakecase-keys": "2.1.0"
+    "camelcase-keys": "6.2.2",
+    "lodash": "4.17.20",
+    "snakecase-keys": "3.2.0"
   },
   "devDependencies": {
-    "chai": "^4.2.0"
+    "chai": "~4.2.0",
+    "mocha": "~8.1.3",
+    "standard": "~14.3.4"
   }
 }

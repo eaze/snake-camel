@@ -11,10 +11,10 @@ module.exports = {
 
 function toCamelCase (o) {
   const obj = deepClone(o)
-  return camelCase(obj, {deep: true})
+  return camelCase(obj, { deep: true })
 }
 
 function toSnakeCase (o) {
   const obj = deepClone(o)
-  return snakeCase(obj, {deep: true})
+  return snakeCase(obj, { deep: true })
 }
